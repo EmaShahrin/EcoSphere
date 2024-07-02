@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "216734963187",
+    "project_id": "carbon-ebd06",
+    "storage_bucket": "carbon-ebd06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216734963187:android:6077f31e09c6154b5e2e86",
+        "android_client_info": {
+          "package_name": "com.example.carbon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9k0hs0O65b3KMP1iWah2ZxL_YvOfFITI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
