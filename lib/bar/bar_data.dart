@@ -24,16 +24,17 @@ class bar_data {
   //initialize bar_data
   void initializeBarData() {
     barData = [
-      weekly_emission(x: 0, y: sun_emission), // Sunday
-      weekly_emission(x: 1, y: mon_emission), // Monday
-      weekly_emission(x: 2, y: tue_emission), // Tuesday
-      weekly_emission(x: 3, y: wed_emission), // Wednesday
-      weekly_emission(x: 4, y: thu_emission), // Thursday
-      weekly_emission(x: 5, y: fri_emission), // Friday
-      weekly_emission(x: 6, y: sat_emission), // Saturday
+      weekly_emission(x: 0, y: sun_emission),
+      weekly_emission(x: 0, y: mon_emission),
+      weekly_emission(x: 0, y: tue_emission),
+      weekly_emission(x: 0, y: wed_emission),
+      weekly_emission(x: 0, y: thu_emission),
+      weekly_emission(x: 0, y: fri_emission),
+      weekly_emission(x: 0, y: sat_emission),
+
+
     ];
   }
-
 
 
 }
