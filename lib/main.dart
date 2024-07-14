@@ -1,16 +1,24 @@
-import 'package:carbon/HomeScreen/HomePg.dart';
-import 'package:carbon/Screens_OnBoard/LoginPg.dart';
-import 'package:flutter/material.dart';
+import 'package:carbon/onboarding/signup_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 
-void main() async {
-  //WidgetsFlutterBinding.ensureInitialized();
- //await Firebase.initializeApp();
+import 'firebase_options.dart';
+import 'onboarding/login_page.dart';
 
- // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform);
 
+    print('Firebase initialized successfully');
+  } catch (e) {
+    print('Failed to initialize Firebase: $e');
+  }
   runApp(const MyApp());
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -29,7 +37,7 @@ class MyApp extends StatelessWidget {
             tertiary: Color(0xFFA9C1F6),
           )
         ),
-        home:Homepg()
+        home:LoginPage(),
     );
   }
 }
