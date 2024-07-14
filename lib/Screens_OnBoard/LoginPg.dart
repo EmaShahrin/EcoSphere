@@ -1,25 +1,29 @@
-import 'package:carbon/carbon_Tracker.dart';
-import 'package:carbon/profile.dart';
+import 'package:carbon/carbonTracker.dart';
+import 'package:carbon/HomeScreen/HomePg.dart';
 import 'package:flutter/material.dart';
 
-class Homepg extends StatefulWidget {
-  const Homepg({super.key});
+class profile extends StatefulWidget {
+  const profile({super.key});
 
   @override
-  State<Homepg> createState() => _HomepgState();
+  State<profile> createState() => _profileState();
 }
 
-class _HomepgState extends State<Homepg> {
-
+class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
-        backgroundColor: Colors.green[900],
-        title: Text("Home Screen", style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.green,
+        title: Text("Profile",style: TextStyle(color: Colors.white)),
+
         centerTitle: true,
       ),
-      body: Center(child: Text('Content goes here')), // Placeholder content
+
+
+
+
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
         backgroundColor: Colors.transparent,
@@ -54,13 +58,14 @@ class _HomepgState extends State<Homepg> {
             Navigator.push(context, MaterialPageRoute(builder: (context)=>Homepg()));
           }
           if(index==1){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>carbon_tracker()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>CarbonTracker()));
           }
           if(index==2){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>profile()));
           }
         },
       ),
+
     );
   }
 }

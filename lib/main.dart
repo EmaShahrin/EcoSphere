@@ -1,5 +1,5 @@
-import 'package:carbon/HomePg.dart';
-import 'package:carbon/LoginPg.dart';
+import 'package:carbon/HomeScreen/HomePg.dart';
+import 'package:carbon/Screens_OnBoard/LoginPg.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -19,8 +19,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:Homepg()
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.light(
+            background: Colors.grey.shade100,
+            onBackground: Colors.black,
+            primary: Color(0xFF506242),
+            secondary: Color(0xFF80A150),
+            tertiary: Color(0xFFA9C1F6),
+          )
+        ),
+        home:Homepg()
     );
   }
 }
