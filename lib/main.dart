@@ -18,15 +18,24 @@ void main() async{
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-   return const MaterialApp(
-     debugShowCheckedModeBanner: false,
-     home: LoginPage(),
-   );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.light(
+            background: Colors.grey.shade100,
+            onBackground: Colors.black,
+            primary: Color(0xFF506242),
+            secondary: Color(0xFF80A150),
+            tertiary: Color(0xFFA9C1F6),
+          )
+        ),
+        home:LoginPage()
+    );
   }
-
 }
